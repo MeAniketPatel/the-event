@@ -1,0 +1,43 @@
+:root {
+  --background-color: #ffffff;
+  --default-color: #2f3138;
+  --heading-color: #0e1b4d;
+  --accent-color: #f82249;
+  --contrast-color: #ffffff;
+  --nav-color: rgba(255, 255, 255, 0.65);
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #212529;
+  --nav-dropdown-hover-color: #f82249;
+
+  // ✅ Font variables
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--default-font);
+  color: var(--default-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+
+@import "sections/nav";
+@import "sections/hero";
+@import "sections/speakers";
+@import "sections/schedule";
+@import "sections/venue";
+@import "sections/hotels";
+@import "sections/gallery";
+@import "sections/sponsors";
+@import "sections/faq";
+@import "sections/tickets";
+@import "sections/contact";
+@import "sections/footer";
+@import "sections/speaker-details";

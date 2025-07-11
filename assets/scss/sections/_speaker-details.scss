@@ -1,0 +1,232 @@
+:root {
+  --background-color: #ffffff;
+  --default-color: #2f3138;
+  --heading-color: #0e1b4d;
+  --accent-color: #f82249;
+  --contrast-color: #ffffff;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+}
+
+.speaker-details {
+  &__page-title {
+    background-image: url(assets/img/page-title-bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 160px 0 80px;
+    text-align: center;
+    position: relative;
+    color: var(--contrast-color);
+
+    &::before {
+      content: "";
+      background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+      position: absolute;
+      inset: 0;
+    }
+
+    @media (max-width: 1199px) {
+      padding: 120px 0 60px;
+    }
+
+    @media (max-width: 991px) {
+      padding: 100px 0 50px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 80px 0 40px;
+    }
+
+    @media (max-width: 575px) {
+      padding: 60px 0 30px;
+    }
+  }
+
+  &__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__heading {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 28px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+    }
+  }
+
+  &__breadcrumbs {
+    .speaker-details__breadcrumb-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .speaker-details__breadcrumb-item {
+        &--current {
+          color: var(--accent-color);
+        }
+
+        .speaker-details__breadcrumb-link {
+          color: var(--contrast-color);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media (max-width: 575px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  &.section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    color: var(--default-color);
+    scroll-margin-top: 92px;
+    overflow: clip;
+
+    @media (max-width: 1199px) {
+      scroll-margin-top: 76px;
+    }
+
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: 575px) {
+      padding: 30px 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__column {
+    &--image {
+      flex: 1 1 50%;
+    }
+
+    &--info {
+      flex: 1 1 50%;
+    }
+
+    @media (max-width: 991px) {
+      &--image,
+      &--info {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+
+    @media (max-width: 767px) {
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 575px) {
+      max-height: 300px;
+    }
+  }
+
+  &__info {
+    .speaker-details__name {
+      font-family: var(--heading-font);
+      font-size: 36px;
+      margin-bottom: 16px;
+
+      @media (max-width: 991px) {
+        font-size: 32px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 24px;
+      }
+    }
+
+    .speaker-details__social {
+      margin-bottom: 16px;
+
+      .speaker-details__social-link {
+        margin-right: 10px;
+        font-size: 20px;
+        color: var(--accent-color);
+        text-decoration: none;
+
+        &:hover {
+          color: color-mix(in srgb, var(--accent-color), transparent 20%);
+        }
+
+        @media (max-width: 575px) {
+          font-size: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .speaker-details__bio {
+      margin-bottom: 16px;
+      line-height: 1.6;
+
+      @media (max-width: 575px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

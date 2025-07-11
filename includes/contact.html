@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    
+<section class="contact" id="contact">
+  <div class="contact__title" data-aos="fade-up" data-aos-delay="00">
+    <h2 class="contact__heading contact__title">Contact</h2>
+    <p class="contact__description">
+      Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+    </p>
+  </div>
+
+  <div class="contact__info" data-aos="fade-up" data-aos-delay="100">
+    <div class="contact__info-item contact__info-item-address">
+      <i class="contact__icon fas fa-map-marker-alt"></i>
+      <h3 class="contact__info-title">Address</h3>
+      <p class="contact__info-detail">A108 Adam Street, New York, NY 535022</p>
+    </div>
+    <div class="contact__info-item">
+      <i class="contact__icon fas fa-phone-alt"></i>
+      <h3 class="contact__info-title">Call Us</h3>
+      <p class="contact__info-detail">+1 5589 55488 55</p>
+    </div>
+    <div class="contact__info-item">
+      <i class="contact__icon fas fa-envelope"></i>
+      <h3 class="contact__info-title">Email Us</h3>
+      <p class="contact__info-detail">info@example.com</p>
+    </div>
+  </div>
+
+  <div class="contact__content" data-aos="fade-up" data-aos-delay="200">
+    <div class="contact__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=..."
+        loading="lazy"
+        allowfullscreen=""
+        style="border:0;"
+      ></iframe>
+    </div>
+
+    <form action="forms/contact.php" method="post" class="contact__form">
+      <div class="contact__form-group">
+        <input type="text" name="name" class="contact__input" placeholder="Your Name" required />
+        <input type="email" name="email" class="contact__input" placeholder="Your Email" required />
+      </div>
+      <input type="text" name="subject" class="contact__input" placeholder="Subject" required />
+      <textarea name="message" rows="6" class="contact__textarea" placeholder="Message" required></textarea>
+      <div class="contact__form-status">
+        <div class="contact__loading">Loading</div>
+        <div class="contact__error-message"></div>
+        <div class="contact__sent-message">Your message has been sent. Thank you!</div>
+      </div>
+      <div class="contact__submit">
+        <button type="submit" class="contact__button">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

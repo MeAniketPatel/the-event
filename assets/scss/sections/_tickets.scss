@@ -1,0 +1,151 @@
+.buy-tickets {
+  &.section {
+    padding: 60px 0;
+
+    @media (max-width: 767px) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: 575px) {
+      padding: 30px 0;
+    }
+  }
+
+  li {
+    opacity: 0.5;
+  }
+
+  h3 {
+    font-weight: 650;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 60px;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      color: rgb(14, 27, 77);
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: var(--accent-color);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 40px;
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .pricing-item {
+    background: var(--surface-color);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+    min-height: 14rem;
+
+    &.buy-tickets__item--featured {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+  }
+
+  &__btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 10%);
+    }
+
+    @media (max-width: 575px) {
+      padding: 0.5rem 1.5rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    font-weight: 0;
+    font-style: normal;
+
+    @media (max-width: 575px) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .big-price-txt {
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+
+    @media (max-width: 767px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__features {
+    list-style: none;
+  }
+
+  .bi-check,
+  .bi-x {
+    color: green;
+    margin-right: 2px;
+    font-size: 20px;
+
+    @media (max-width: 575px) {
+      font-size: 18px;
+    }
+  }
+}

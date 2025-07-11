@@ -1,0 +1,159 @@
+.speakers {
+  --default-color: #ffffff;
+  --contrast-color: #ffffff;
+  --accent-color: #f82249;
+
+  color: var(--default-color);
+  background-color: #ffffff;
+  padding: 60px 90px;
+
+  @media (max-width: 991px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 60px;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      color: rgb(14, 27, 77);
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: var(--accent-color);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 40px;
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 575px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  &__member {
+    position: rami;
+    overflow: hidden;
+    text-align: center;
+
+    &-img {
+      width: 100%;
+      display: block;
+    }
+
+    &-info {
+      position: absolute;
+      inset: auto 0 -44px 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      transition: bottom 0.4s;
+
+      @media (max-width: 575px) {
+        padding: 15px 0;
+      }
+
+      &-content {
+        h4 {
+          font-size: 16px;
+          font-weight: 700;
+          margin-bottom: 4px;
+
+          a {
+            color: var(--contrast-color);
+            text-decoration: none;
+
+            &:hover {
+              color: var(--accent-color);
+            }
+          }
+
+          @media (max-width: 575px) {
+            font-size: 14px;
+          }
+        }
+
+        span {
+          font-size: 13px;
+          font-style: italic;
+          display: block;
+
+          @media (max-width: 575px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &-social {
+      text-align: center;
+      padding-top: 10px;
+
+      a {
+        margin: 0 4px;
+        display: inline-block;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--default-color);
+        }
+
+        i {
+          font-size: 18px;
+          margin: 0 2px;
+
+          @media (max-width: 575px) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &:hover &-info {
+      bottom: 0;
+    }
+  }
+}
